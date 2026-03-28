@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Variant Report — clinvar_chr22</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 1100px;
+            margin: 40px auto; padding: 0 20px; color: #2c2c2a; }
+    h1 { font-size: 22px; font-weight: 500; margin-bottom: 4px; }
+    .meta { color: #5f5e5a; font-size: 14px; margin-bottom: 32px; }
+    .card { border: 1px solid #d3d1c7; border-radius: 10px;
+             padding: 20px 24px; margin-bottom: 24px; }
+    .stats { display: flex; gap: 32px; flex-wrap: wrap; }
+    .stat { display: flex; flex-direction: column; }
+    .stat-val { font-size: 28px; font-weight: 500; color: #185FA5; }
+    .stat-label { font-size: 12px; color: #888780; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { text-align: left; padding: 10px 8px; border-bottom: 2px solid #d3d1c7;
+          font-weight: 500; color: #5f5e5a; }
+    td { padding: 9px 8px; border-bottom: 1px solid #f1efe8; }
+    tr:hover td { background: #f9f8f5; }
+    code { background: #f1efe8; padding: 1px 5px;
+            border-radius: 3px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Variant Pathogenicity Report</h1>
+  <div class="meta">Sample: <strong>clinvar_chr22</strong> &nbsp;|&nbsp;
+       Model: XGBoost &nbsp;|&nbsp;
+       ROC-AUC (CV): 0.992 ± 0.001 &nbsp;|&nbsp;
+       Avg Precision (CV): 0.888 ± 0.018
+  </div>
+
+  <div class="card">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-val">10829</span>
+        <span class="stat-label">total variants</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">232</span>
+        <span class="stat-label">high-confidence pathogenic</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">417</span>
+        <span class="stat-label">medium+ score</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:16px;font-weight:500;margin-top:0">
+      Top 50 variants by pathogenicity score
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th><th>Position</th><th>Allele</th><th>Gene</th>
+          <th>Consequence</th><th>Severity</th><th>Max AF</th>
+          <th>Pathogenicity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>22: 28734645</td>
+          <td><code>G&gt;GT</code></td>
+          <td>CHEK2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.999)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>22: 50074215</td>
+          <td><code>C&gt;T</code></td>
+          <td>MLC1</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.999)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>22: 20881100</td>
+          <td><code>C&gt;CA</code></td>
+          <td>SNAP29</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>5.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.999)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>22: 19176420</td>
+          <td><code>C&gt;T</code></td>
+          <td>SLC25A1</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.998)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>22: 35387178</td>
+          <td><code>T&gt;A</code></td>
+          <td>HMOX1</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.998)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>22: 38126370</td>
+          <td><code>C&gt;T</code></td>
+          <td>PLA2G6</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.998)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>22: 20994728</td>
+          <td><code>G&gt;A</code></td>
+          <td>LZTR1</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>8.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.998)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>22: 36763918</td>
+          <td><code>C&gt;A</code></td>
+          <td>IFT27</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>1.10e-04</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.997)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>22: 28719455</td>
+          <td><code>TC&gt;T</code></td>
+          <td>CHEK2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>22: 20982442</td>
+          <td><code>TA&gt;T</code></td>
+          <td>LZTR1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>22: 38169318</td>
+          <td><code>G&gt;A</code></td>
+          <td>PLA2G6</td>
+          <td>nonsense</td>
+          <td>0</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>22: 28725278</td>
+          <td><code>G&gt;A</code></td>
+          <td>CHEK2</td>
+          <td>nonsense</td>
+          <td>0</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>22: 50524144</td>
+          <td><code>G&gt;A</code></td>
+          <td>SCO2</td>
+          <td>nonsense</td>
+          <td>0</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>22: 26468571</td>
+          <td><code>G&gt;A</code></td>
+          <td>HPS4</td>
+          <td>nonsense</td>
+          <td>0</td>
+          <td>3.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 28743903</td>
+          <td><code>T&gt;TA</code></td>
+          <td>HSCB</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 28699893</td>
+          <td><code>CG&gt;C</code></td>
+          <td>CHEK2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 18931014</td>
+          <td><code>TC&gt;T</code></td>
+          <td>PRODH</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 28711907</td>
+          <td><code>ACT&gt;A</code></td>
+          <td>CHEK2</td>
+          <td>splice_donor_variant</td>
+          <td>7</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 50220267</td>
+          <td><code>ACT&gt;A</code></td>
+          <td>TUBGCP6</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 17189972</td>
+          <td><code>CTT&gt;C</code></td>
+          <td>ADA2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 18079971</td>
+          <td><code>TAC&gt;T</code></td>
+          <td>PEX26</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 50233519</td>
+          <td><code>CA&gt;C</code></td>
+          <td>TUBGCP6</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 28689187</td>
+          <td><code>TC&gt;T</code></td>
+          <td>CHEK2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 28710028</td>
+          <td><code>TC&gt;T</code></td>
+          <td>CHEK2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 20988807</td>
+          <td><code>AG&gt;A</code></td>
+          <td>LZTR1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 20988820</td>
+          <td><code>ACG&gt;A</code></td>
+          <td>LZTR1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 49913648</td>
+          <td><code>GC&gt;G</code></td>
+          <td>ALG12</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 20994184</td>
+          <td><code>CG&gt;C</code></td>
+          <td>LZTR1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 32479126</td>
+          <td><code>TCC&gt;T</code></td>
+          <td>FBXO7</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 26458472</td>
+          <td><code>A&gt;AG</code></td>
+          <td>HPS4</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 50244277</td>
+          <td><code>CAT&gt;C</code></td>
+          <td>TUBGCP6</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 28724990</td>
+          <td><code>TAG&gt;T</code></td>
+          <td>CHEK2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 40361286</td>
+          <td><code>T&gt;TA</code></td>
+          <td>ADSL</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 50626975</td>
+          <td><code>G&gt;GA</code></td>
+          <td>ARSA</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 46352160</td>
+          <td><code>C&gt;CATTTCCTTCTTCAG</code></td>
+          <td>TRMU</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 50218301</td>
+          <td><code>T&gt;TGG</code></td>
+          <td>TUBGCP6</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 30607368</td>
+          <td><code>GT&gt;G</code></td>
+          <td>TCN2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>22: 30617352</td>
+          <td><code>G&gt;GA</code></td>
+          <td>TCN2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>1.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.996)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>22: 38671073</td>
+          <td><code>CAG&gt;C</code></td>
+          <td>CBY1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>5.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>22: 31621869</td>
+          <td><code>G&gt;GA</code></td>
+          <td>PISD</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>5.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 20752912</td>
+          <td><code>AG&gt;A</code></td>
+          <td>PI4KA</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 32104783</td>
+          <td><code>CA&gt;C</code></td>
+          <td>SLC5A1</td>
+          <td>splice_acceptor_variant</td>
+          <td>7</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 25898439</td>
+          <td><code>GA&gt;G</code></td>
+          <td>MYO18B</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 46353796</td>
+          <td><code>GC&gt;G</code></td>
+          <td>TRMU</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 36864943</td>
+          <td><code>A&gt;AAAGGAGGATC</code></td>
+          <td>NCF4</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 50524009</td>
+          <td><code>CAG&gt;C</code></td>
+          <td>SCO2</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 50226363</td>
+          <td><code>CCA&gt;C</code></td>
+          <td>TUBGCP6</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 50221267</td>
+          <td><code>CCT&gt;C</code></td>
+          <td>TUBGCP6</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>22: 20989634</td>
+          <td><code>CAT&gt;C</code></td>
+          <td>LZTR1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>2.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>22: 50070543</td>
+          <td><code>C&gt;CA</code></td>
+          <td>MLC1</td>
+          <td>frameshift_variant</td>
+          <td>8</td>
+          <td>8.00e-05</td>
+          <td>
+            <span style="background:#993C1D;color:#fff;
+                        padding:2px 8px;border-radius:4px;font-size:12px">
+              High (0.995)
+            </span>
+          </td>
+        </tr></tbody>
+    </table>
+  </div>
+</body>
+</html>

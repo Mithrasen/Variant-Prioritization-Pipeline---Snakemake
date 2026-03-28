@@ -1,0 +1,8 @@
+name: bcftools
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - bcftools=1.19
+  - htslib=1.19
+  - tabix

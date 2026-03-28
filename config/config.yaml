@@ -1,0 +1,23 @@
+samples:
+  - clinvar_pathogenic_chr22
+  - clinvar_benign_chr22
+
+# paths — update to your local setup
+vep_cache_dir: "resources/vep_cache"
+cadd_snvs:    "resources/cadd/whole_genome_SNVs.tsv.gz"
+cadd_indels:  "resources/cadd/gnomad.genomes.r3.0.indel.tsv.gz"
+
+# feature engineering
+min_allele_freq: 0.0
+max_allele_freq: 1.0
+
+# ML
+test_size:      0.2
+random_seed:    42
+cv_folds:       5
+xgb_params:
+  n_estimators:     300
+  max_depth:        6
+  learning_rate:    0.05
+  subsample:        0.8
+  colsample_bytree: 0.8

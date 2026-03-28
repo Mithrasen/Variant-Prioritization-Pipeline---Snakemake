@@ -1,0 +1,8 @@
+name: vep
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - ensembl-vep=111
+  - htslib=1.19
+  - tabix

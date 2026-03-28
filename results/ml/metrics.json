@@ -1,0 +1,36 @@
+{
+  "cv_results": {
+    "XGBoost": {
+      "roc_auc_mean": 0.991658465601215,
+      "roc_auc_std": 0.0014743979418425537,
+      "avg_prec_mean": 0.8879132935427396,
+      "avg_prec_std": 0.018170402128599536
+    },
+    "Random Forest": {
+      "roc_auc_mean": 0.9912781465875238,
+      "roc_auc_std": 0.0018930090346707018,
+      "avg_prec_mean": 0.8924655561409555,
+      "avg_prec_std": 0.020985639426326447
+    },
+    "Logistic Regression": {
+      "roc_auc_mean": 0.9846412331735385,
+      "roc_auc_std": 0.004584796392640662,
+      "avg_prec_mean": 0.8080152173012486,
+      "avg_prec_std": 0.056769857115701566
+    }
+  },
+  "best_model": "XGBoost",
+  "n_variants": 5510,
+  "n_pathogenic": 348,
+  "n_benign": 5162,
+  "features": [
+    "mc_severity",
+    "is_indel",
+    "af_esp_log",
+    "af_exac_log",
+    "af_tgp_log",
+    "max_af_log",
+    "is_germline",
+    "n_submitters"
+  ]
+}

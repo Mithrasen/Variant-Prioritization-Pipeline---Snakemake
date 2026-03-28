@@ -1,0 +1,6 @@
+.snakemake/
+resources/
+logs/
+results/ml/model.pkl
+__pycache__/
+*.pyc

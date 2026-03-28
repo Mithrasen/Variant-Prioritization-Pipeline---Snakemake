@@ -1,0 +1,43 @@
+configfile: "config/config.yaml"
+
+rule all:
+    input:
+        "results/ml/model_benchmark.png",
+        "results/ml/shap_summary.png",
+        "results/reports/variant_report.html"
+
+rule extract_features:
+    input:
+        pathogenic = "resources/vcf/clinvar_pathogenic_chr22.vcf.gz",
+        benign     = "resources/vcf/clinvar_benign_chr22.vcf.gz"
+    output:
+        tsv = "results/features/clinvar_chr22.features.tsv"
+    conda: "envs/python.yaml"
+    log: "logs/features/extract.log"
+    script:
+        "scripts/extract_features.py"
+
+rule train_model:
+    input:
+        features = "results/features/clinvar_chr22.features.tsv"
+    output:
+        model   = "results/ml/model.pkl",
+        metrics = "results/ml/metrics.json",
+        bench   = "results/ml/model_benchmark.png",
+        shap    = "results/ml/shap_summary.png"
+    conda: "envs/python.yaml"
+    log: "logs/ml/train.log"
+    script:
+        "scripts/train_model.py"
+
+rule generate_report:
+    input:
+        features = "results/features/clinvar_chr22.features.tsv",
+        model    = "results/ml/model.pkl",
+        metrics  = "results/ml/metrics.json"
+    output:
+        report = "results/reports/variant_report.html"
+    conda: "envs/python.yaml"
+    log: "logs/reports/report.log"
+    script:
+        "scripts/generate_report.py"
